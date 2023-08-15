@@ -1,0 +1,440 @@
+.layout-container{
+    height: 120vh;
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.layout-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/11/29/04/42/conifers-1867371_640.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    filter: blur(3px);
+    z-index: -1;
+    height: 130vh;
+}
+@media screen and (max-width: 1268px){
+    .layout-container{
+        height: 150vh;
+    }
+    .layout-main-left-symtoms-image{
+        width: 350px;
+        height: 300px;
+    }
+    .layout-main-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.layout-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    flex-direction:column;
+    z-index: 100;
+    font-family: 'Nunito', sans-serif;
+    color:white;
+    gap: 1rem;
+    /* text-decoration: underline; */
+
+    
+}
+.layout-header h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color:white;
+    position:relative;
+    top: 50px;
+    /* text-decoration: underline;/ */
+}
+.layout-subheader{
+    font-size: 1.2rem;
+    font-weight: 600;
+    position:relative;
+    top: 50px;
+}
+
+.layout-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    flex-direction:row;
+    z-index: 100;
+    font-family: 'Nunito', sans-serif;
+    color:white;
+    gap: 10rem;
+    margin-top: 100px;
+}
+.layout-main-left-symtoms-image{
+    width:500px;
+    height: 400px;
+    border-radius: 20px;    
+    margin-top:25px;
+    margin-bottom: 45px;
+}
+img{
+    border-radius: 20px;
+}
+.layout-main-left-symtoms{
+    font-size: 1.8rem;
+    text-align: center;
+}
+.layout-main-right-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    flex-direction:column;
+    z-index: 100;
+    font-family: 'Nunito', sans-serif;
+    color:white;
+    background-color: transparent;
+    gap: 1rem;
+    margin-top: 100px;
+    height: 550px;
+    width: 500px;
+    border-radius: 20px;
+    border: 2px solid rgb(255,255, 255);
+    filter: drop-shadow(0 0 .1rem rgb(255, 255, 255));
+}
+@media screen and (max-width: 1208px){
+    .layout-header h1{
+        font-size: 2rem;
+    }
+    .layout-subheader{
+        font-size: 1rem;
+    }
+    .layout-main-container{
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    .layout-main-left-symtoms-image{
+        margin-top: 20px;
+        height: 250px;
+    }
+    .layout-main-right-form{
+        width: 500px;
+        height: 480px;
+        
+       
+    }
+    .layout-container::before{
+        height: 170vh;
+    }
+}
+@media screen and (max-width: 540px){
+    .layout-header h1{
+        font-size: 1.5rem;
+    }
+    .layout-subheader{
+        font-size: .8rem;
+    }
+    .layout-main-container{
+        flex-direction: column;
+        gap: 80px;
+    }
+    .layout-main-left-symtoms-image{
+        margin-top: 20px;
+        height: 250px;
+        width: 450px;
+    }
+    .layout-main-right-form{
+        width: 400px;
+        height: 520px;
+        margin-top:0px;
+       
+    }
+}
+@media screen and (max-width: 480px){
+    .layout-header h1{
+        font-size: 1.2rem;
+    }
+    .layout-subheader{
+        font-size: .6rem;
+    }
+    .layout-main-container{
+        flex-direction: column;
+        gap: 80px;
+    }
+    .layout-main-left-symtoms-image{
+        margin-top: 20px;
+        height: 250px;
+        width: 390px;
+    }
+    .layout-main-right-form{
+        width: 360px;
+        height: 520px;
+        
+       
+    }
+}
+@media screen and (max-width: 390px){
+    .layout-header h1{
+        font-size: 1rem;
+    }
+    .layout-subheader{
+        font-size: .5rem;
+    }
+    .layout-main-container{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .layout-main-left-symtoms-image{
+        margin-top: 20px;
+        height: 200px;
+        width: 320px;
+    }
+    .layout-main-right-form{
+        width: 300px;
+        height: 520px;
+        
+       
+    }
+}
+
+
+.layout-main-right-form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.input-label-container{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;   
+    position: relative;
+}
+
+.input-label-container input {
+    width: 310px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    transition: border-bottom-color 0.3s;
+}
+.input-label-container label {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    
+   
+    transition: .5s;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1268px){
+    .input-label-container input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 1208px){
+    .input-label-container input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 540px){
+    .input-label-container input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 480px){
+    .input-label-container input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 390px){
+    .input-label-container input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 330px){
+    .layout-main-right-form-input{
+        width: 150px;
+    }
+    .input-label-container  input{
+        width: 200px;
+    }
+    
+    .layout-main-left-symtoms-image{
+        width: 250px;
+    }
+}
+.arrow{
+    width:20px;
+    height: 20px;
+    
+    cursor: pointer;
+}
+.rt-arrow{
+    position: relative;
+    left: 220px;
+}
+@media screen and (max-width: 786px){
+    .rt-arrow{
+        left: 190px;
+    }
+}
+@media screen and (max-width: 540px){
+    .rt-arrow{
+        left: 150px;
+    }
+}
+@media screen and (max-width: 390px){
+    .rt-arrow{
+        left: 120px;
+    }
+}
+.arrow-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-top: 20px;
+    position: relative;
+    right: 80px;
+}
+@media screen and (max-width: 2050px){
+    .arrow-container{
+        /* right: 120px; */
+        left: 0px;
+    }
+}
+@media screen and (max-width: 1300px){
+    .arrow-container{
+        right: 100px;
+    }
+}
+@media screen and (max-width: 1208px){
+    .arrow-container{
+        right: 130px;
+        bottom: 10px;
+    }
+}
+@media screen and (max-width: 806px){
+    .arrow-container{
+        right: 100px;
+        bottom: 10px;
+    }
+}
+@media screen and (max-width: 540px){
+    .arrow-container{
+        right: 80px;
+        bottom: 10px;
+    }
+}
+@media screen and (max-width: 380px){
+    .arrow-container{
+        right: 60px;
+        bottom: 10px;
+    }
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 20px;
+    
+}
+.multi-step-contaoner{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: .5rem;
+    flex-direction: column;
+}
+.main-form-stps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20px;
+    position: relative;
+    
+    flex-direction: column;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    transition: .5s;
+    cursor: pointer;
+    
+}
+.disabled-button {
+    
+    color: #292929;
+    cursor: not-allowed;
+  }
+input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    transition: border-bottom-color 0.3s;
+}
+
+
+
+
+
+@media screen and (max-width: 1268px){
+
+    .multi-step-contaoner input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 1208px){
+    .multi-step-contaoner input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 540px){
+    .multi-step-contaoner input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 480px){
+    .multi-step-contaoner input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 390px){
+    .multi-step-contaoner input {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 330px){
+    .layout-main-right-form-input{
+        width: 150px;
+    }
+    .multi-step-contaoner  input{
+        width: 200px;
+    }
+    
+    .layout-main-left-symtoms-image{
+        width: 250px;
+    }
+}
