@@ -3,8 +3,6 @@ import { useState } from 'react';
 import '../../Styles/layout.css'
 import symtoms from '../../Assets/symtoms.jpg'
 import ReactImageMagnify from 'react-image-magnify';
-import { Link } from 'react-router-dom';
-import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import MultiStepForm from './MultiStepForm';
 const Layout = () => {
 
@@ -23,10 +21,6 @@ const Layout = () => {
             [name]: value,
         }));
     };
-
-
-
-
 
 
 

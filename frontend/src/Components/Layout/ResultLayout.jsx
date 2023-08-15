@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../Styles/layout.css';
 import symtoms from '../../Assets/symtoms.jpg';
 import ReactImageMagnify from 'react-image-magnify';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 const Result = () => {
-  
+
+    const { resultData } = useSelector((state) => state.resultData);
 
     return (
         <div className='layout-container'>
             <div className='layout-header'>
                 <h1 className='layout-Header'>Parkinson's Prediction</h1>
-                <h3 className='layout-subheader'>kindly answer all the inputs for your desired result</h3>
+                <h3 className='layout-subheader'>See your Prediction Result below</h3>
             </div>
             <div className='layout-main-container'>
                 <div className='layout-main-left'>
@@ -33,14 +36,10 @@ const Result = () => {
                 <div className='layout-main-right'>
                     <form className='layout-main-right-form'>
                         <div className='layout-main-right-form-input'>
-                           
 
-                           
 
-                            
-
-                            <div className='input-label-container-para'>
-                                predicted result...
+                            <div className='input-label-container-para result-cont'>
+                                Result: {resultData ? resultData : 'Not Yet Evaluated'}
                             </div>
                             <div className='btn-container'>
                             <Link to='/'>
