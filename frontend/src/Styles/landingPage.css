@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Nunito&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+body{
+    overflow-x: hidden;
+}
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.btn{
+    /* width: 100%; */
+    padding: 10px 20px; 
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border: 2.5px solid white;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+.image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    
+    animation: fade 10s ease-in-out infinite alternate;
+    transition: all 1s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fade {
+    0% {
+        transform: scale(0.5);
+        background: url('../Assets/park.png') no-repeat center center/cover;
+    }
+    50% {
+        transform: scale(0.8);
+        background: url('../Assets/park.png') no-repeat center center/cover;
+    }
+    75% {
+        transform: scale(0.9);
+        background: url('../Assets/parkk.png') no-repeat center center/cover;
+    }
+    100% {
+        transform: scale(1);
+        background: url('../Assets/parkk.png') no-repeat center center/cover;
+    }
+}
+
+
+.btn:hover{
+    background-color: white;
+    color: green;
+}
+.main-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.pexels.com/photos/2609107/pexels-photo-2609107.jpeg?cs=srgb&dl=pexels-darius-krause-2609107.jpg&fm=jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    filter: blur(2px);
+    z-index: -1;
+}
+.header{
+    width: 100%;
+    font-size: 2.5rem;
+    padding-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Nunito', sans-serif;
+    color:white;
+    text-decoration: underline;
+}
+.content{
+    width: 100%;
+    height: 90vh;
+   
+    display: flex;
+    justify-content: space-around;
+    gap: 300px;
+    align-items: center; 
+    flex-direction: row;
+    padding: 50px;
+}
+.right-content-txt{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    /* margin-left: 30px; */
+height: 200px;
+margin-top: 180px;
+   
+    
+}
+@media screen and (max-width: 1268px){
+    .content{
+        margin-top: 180px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .image{
+        width: 500px;
+        height: 500px;
+    }
+    .main-container{
+        height:150vh;
+    }
+    .right-content-txt{
+        margin-top: 0px;
+    }
+    
+    
+}
+@media screen and (max-width: 768px){
+    .content{
+        margin-top: 100px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .image{
+        width: 400px;
+        height: 400px;
+    }
+    
+    .right-content-txt{
+        margin-top: 0px;
+    }
+    
+    
+}
+@media screen and (max-width: 500px){
+    .content{
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .image{
+        width: 350px;
+        height: 350px;
+        margin-top: 50px;
+    }
+    .header{
+        font-size: 1.5rem;
+    }
+    .right-content-txt{
+        font-size: 1rem;
+       
+    }
+    .btn{
+        font-size: 1rem;
+        margin-top: 0px;
+    }
+    .main-container{
+        height: 120vh;
+    }
+}
+@media screen and (max-width: 380px){
+    .main-container{
+        height: 150vh;
+    }
+    .right-container{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .content{
+        margin-top: 0px;
+        flex-direction: column;
+        
+    }
+    .image{
+        width: 250px;
+        height: 250px;
+        margin-top: 80px;
+    }
+    .header{
+        font-size: 1.5rem;
+        margin-bottom: 150px;
+    }
+    .right-content-txt{
+        font-size: 1rem;
+       
+    }
+    .btn{
+        font-size: 1rem;
+        margin-top: 80px;
+    }
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+.margin{
+    margin-top: 20px;
+    font-size: 1rem;
+}
