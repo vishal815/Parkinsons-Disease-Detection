@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../Styles/layout.css'
-const Step = ({ title, fields, formData, onInputChange }) => {
+const Step = ({ fields, formData, onInputChange }) => {
   return (
     <div className='main-form-stps'>
       
@@ -12,6 +12,7 @@ const Step = ({ title, fields, formData, onInputChange }) => {
             type={field === 'username' ? 'text' : 'number'}
             value={formData[field] || ''}
             onChange={(e) => onInputChange(field, e.target.value)}
+            min={field === 'username' ? null : 0}
           />
         </div>
       ))}
