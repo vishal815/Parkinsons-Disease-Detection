@@ -2,7 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 import '../../Styles/layout.css'
 import symtoms from '../../Assets/symtoms.jpg'
-import ReactImageMagnify from 'react-image-magnify';
+
+// import { Link } from 'react-router-dom';
+// import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import MultiStepForm from './MultiStepForm';
 const Layout = () => {
 
@@ -23,7 +25,6 @@ const Layout = () => {
     };
 
 
-
   return (
     <div className='layout-container'>
         <div className='layout-header' >
@@ -33,20 +34,9 @@ const Layout = () => {
         <div className='layout-main-container'>
             <div className='layout-main-left'>
             <p className='layout-main-left-asymtoms'>Symtoms</p>
-                <div className='layout-main-left-symtoms-image'>
+                <div className=''>
                 
-                                    <ReactImageMagnify {...{
-                        smallImage: {
-                            alt: 'Wristwatch by Ted Baker London',
-                            isFluidWidth: true,
-                            src: symtoms
-                        },
-                        largeImage: {
-                            src: symtoms,
-                            width: 1200,
-                            height: 1800
-                        }
-                    }} />
+                    <img src={symtoms} alt='symtoms' className='layout-main-left-symtoms-image'/>
                 </div>
             </div>
             <div className="layout-main-right">

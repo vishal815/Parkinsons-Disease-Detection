@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Step from './Step';
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setResult } from './../../redux/resultSlice';
 
@@ -25,6 +25,9 @@ const MultiStepForm = () => {
   const [loading, setLoading] = useState();
 
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
 
   const handleInputChange = (field, value) => {
     setFormData((prevData) => ({ ...prevData, [field]: value }));
@@ -89,6 +92,8 @@ const MultiStepForm = () => {
 
         dispatch(setResult(`Dear ${formData.username}, you don't have Parkinson Disease.`));
 
+        navigate('/result');
+
       } else {
 
         toast.success('Prediction done successfully', {
@@ -98,6 +103,7 @@ const MultiStepForm = () => {
 
         dispatch(setResult(`Dear ${formData.username}, you have Parkinson Disease.`));
 
+        navigate('/result');
 
       }
 
@@ -128,16 +134,14 @@ const MultiStepForm = () => {
           <BsFillArrowLeftCircleFill className="arrow" />
         </button>
         {step === steps.length - 1 ? (
-          <Link to={{ pathname: '/result', state: { formData } }}>
-            <button className={isAllFieldsEmpty() ? 'disabled-button' : 'btn'} disabled={isAllFieldsEmpty()} onClick={onSubmitForm}>
-              {loading ? 'Predicting' : 'Predict'}
-            </button>
-          </Link>
+          <button className={isAllFieldsEmpty() ? 'disabled-button' : 'btn'} type='button' disabled={isAllFieldsEmpty()} onClick={onSubmitForm}>
+            {loading ? 'Predicting' : 'Predict'}
+          </button>
         ) : (
           <button
             className={isAnyFieldEmpty() ? 'disabled-button' : ''}
             onClick={nextStep}
-            disabled={isAnyFieldEmpty()}
+            disabled={isAnyFieldEmpty() || loading ? true : false}
           >
             <BsFillArrowRightCircleFill className="arrow" />
           </button>
