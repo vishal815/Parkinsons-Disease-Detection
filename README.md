@@ -11,3 +11,9 @@ What this project basically does is it uses Support Vector Classifier (SVC) to p
 #### Deployed backend API URL of the machine learning model: https://parkinson-disease-pred.onrender.com/
 
 #### Swagger Documentation of the machine learning model API: https://parkinson-disease-pred.onrender.com/docs
+
+## Overview of Project
+
+https://github.com/vishal815/Parkinsons-Disease-Detection/assets/83393190/6f64958f-2636-403c-b103-52f9be8d7dbf
+
+
