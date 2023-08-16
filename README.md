@@ -14,6 +14,9 @@ What this project basically does is it uses Support Vector Classifier (SVC) to p
 
 ## Overview of Project
 
-https://github.com/vishal815/Parkinsons-Disease-Detection/assets/83393190/6f64958f-2636-403c-b103-52f9be8d7dbf
+https://github.com/vishal815/Parkinsons-Disease-Detection/assets/83393190/ee343fcf-320e-4ae3-a9b6-490e0fe5b68f
+
+
+
 
 
